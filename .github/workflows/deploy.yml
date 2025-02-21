@@ -11,20 +11,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'  # 根據您的 package.json 選擇適當的 Node.js 版本
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build  # 確保 package.json 中有 "build" 腳本，例如 "vite build" 或 "webpack"
-
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.1.5
         with:
           branch: gh-pages
-          folder: docs  # 如果打包後的檔案在 docs 目錄
-          token: ${{ secrets.GITHUB_TOKEN }}
+          folder: docs
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
