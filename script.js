@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCs3ONnZVFAzfR-uxb14QWbahWYh_fMQbA",
-  authDomain: "recipe-organizer-45d5d.firebaseapp.com",
-  projectId: "recipe-organizer-45d5d",
-  storageBucket: "recipe-organizer-45d5d.firebasestorage.app",
-  messagingSenderId: "246851132039",
-  appId: "1:246851132039:web:18d16a8d1c2340d101f622"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 // Initialize Firebase
