@@ -143,3 +143,17 @@ chatSubmit.addEventListener('click', () => {
     const ingredients = chatInput.value;
     chatResponse.textContent = `Try making a simple dish with ${ingredients}! How about ${ingredients.split(',').join(' and ')} salad?`;
 });
+
+
+function mockBiometricLogin() {
+    if (confirm('Simulate fingerprint scan?')) {
+        alert('Logged in!');
+        document.body.style.display = 'block'; // Show app
+    } else {
+        alert('Login failed.');
+    }
+}
+document.body.style.display = 'none'; // Hide until login
+mockBiometricLogin();
+
+
