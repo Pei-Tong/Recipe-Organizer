@@ -15,5 +15,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-          publish_dir: docs  # 因為您的檔案在 docs 目錄
+          publish_dir: docs
           publish_branch: gh-pages
